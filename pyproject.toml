@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vizi-nwb"
+dynamic = ["version"]
+description = "A vizi reader for the images in NWB (Neurodata Without Borders) files, NWBelegans included"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11,!=3.12.*,<3.14"
+dependencies = [
+    # The SDK, release 1.0.0 (protocol 1.0), is pinned to a commit of its public
+    # repository and built into the vendored wheel (vendor/) that the locks hash.
+    "vizi-plugin-sdk @ git+https://github.com/focolab/vizi-plugin-sdk@9be01b8012a6cb9420ba85357433cdfe460f5c2b",
+    "h5py>=3.10",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+# Only the tests use pynwb: it writes core NWB files to check the reader against.
+test = ["pytest>=8", "pynwb>=2.8"]
+
+[tool.setuptools]
+packages = ["vizi_nwb"]
+
+[tool.setuptools.dynamic]
+version = { attr = "vizi_nwb.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# the package imports from the checkout: a bootstrapped .venv does not install it
+pythonpath = ["."]

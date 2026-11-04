@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+.pytest_cache/
+*.egg-info/
+# Real NWB files fetched from DANDI for tests (scripts/fetch-test-data.sh)
+.dandi-cache/
+# the two-image file the README's Develop section writes for a look in vizi
+/two-images.nwb
+# a local SDK checkout, for refreshing tests/_vendor
+.sdk/

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 1,
+  "id": "org.focolab.nwb",
+  "name": "NWB reader",
+  "version": "0.1.0",
+  "engines": {
+    "vizi": "1.0"
+  },
+  "min_vizi": "1.0.0",
+  "sdk_version": "1.0.0",
+  "entry": {
+    "command": [
+      ".venv/bin/python",
+      "vizi_nwb_plugin.py"
+    ]
+  },
+  "contributions": {
+    "readers": [
+      {
+        "id": "nwb",
+        "extensions": [
+          ".nwb"
+        ],
+        "name": "NWB (Neurodata Without Borders)",
+        "fallback_extensions": [
+          ".h5",
+          ".hdf5"
+        ]
+      }
+    ]
+  }
+}
