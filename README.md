@@ -166,6 +166,8 @@ NWB imaging files, and NWBelegans files in particular, are laid out comes from:
   (focolab): `clefNWB.py`, which writes the channel-first NeuroPAL volumes this reader also
   recognizes.
 
+The reader was originally written by Rex Kerr.
+
 It's built on the [vizi plugin SDK](https://github.com/focolab/vizi-plugin-sdk). The test
 data is from the [DANDI Archive](https://dandiarchive.org): dandiset 000714 (Chaudhary, Lu
 lab), as converted for NWBelegans.
