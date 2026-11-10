@@ -37,7 +37,7 @@ From a clone, with no catalog entry needed:
        .venv/bin/python scripts/doctor.py                      # Linux, macOS
        .venv\Scripts\python.exe scripts\doctor.py              # Windows
 
-4. Start vizi. In **Tools → Plugin Manager…** press **Refresh**. *NWB reader* is listed.
+4. Start vizi. In **Tools → Plugin Manager…** press **Refresh**. *NWB* is listed.
 
 To update, run `git pull` in the folder. If bootstrap then says the `.venv` was built from a
 different lock, delete `.venv` and repeat from step 2.

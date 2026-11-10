@@ -30,7 +30,7 @@ from .catalog import Candidate, scan
 from .volume import Volume
 
 PLUGIN_ID = "org.focolab.nwb"
-plugin(PLUGIN_ID, name="NWB reader", version=__version__)
+plugin(PLUGIN_ID, name="NWB", version=__version__)
 
 
 @reader(
