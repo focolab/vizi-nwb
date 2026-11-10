@@ -16,7 +16,7 @@ def test_the_manifest_is_current():
 
 def test_the_manifest_floors_and_reader():
     data = json.loads((ROOT / "vizi-plugin.json").read_text(encoding="utf-8"))
-    assert data["id"] == "org.focolab.nwb"
+    assert data["id"] == "org.focolab.nwb" and data["name"] == "NWB"
     assert data["engines"]["vizi"] == "1.0" and data["min_vizi"] == "1.0.0" and data["sdk_version"] == "1.0.0"
     assert data["entry"]["command"] == [".venv/bin/python", "vizi_nwb_plugin.py"]
     assert data["contributions"]["readers"] == [{

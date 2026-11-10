@@ -1,8 +1,8 @@
 {
   "manifest_version": 1,
   "id": "org.focolab.nwb",
-  "name": "NWB reader",
-  "version": "0.1.0",
+  "name": "NWB",
+  "version": "0.1.1",
   "engines": {
     "vizi": "1.0"
   },
